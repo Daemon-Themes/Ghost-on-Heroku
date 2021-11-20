@@ -16,7 +16,7 @@
     },
     "THEME_DIR_NAME": {
       "description": "Theme directory name where your theme will be cloned",
-      "required": true
+      "required": false
     },
     "THEME_RIPOSITORY": {
       "required": true,

@@ -26,7 +26,7 @@
     "ghost-storage-cloudinary": "^2.1.5",
     "git-clone": "^0.2.0",
     "mysql": "^2.18.1",
-    "casper": "github:TryGhost/Casper#main"
+    "casper": "github:TryGhost/Casper"
   },
   "scripts": {
     "start": "node ghost.js",

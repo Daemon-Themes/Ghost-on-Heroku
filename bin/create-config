@@ -103,7 +103,10 @@ async function getTheme() {
     path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
   );
 }
-getTheme();
+
+if (!!process.env.THEME_RIPOSITORY) {
+  getTheme();
+}
 
 var configContents = JSON.stringify(createConfig(), null, 2);
 fs.writeFileSync(path.join(appRoot, "config.production.json"), configContents);
