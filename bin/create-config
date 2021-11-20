@@ -97,13 +97,14 @@ function getMysqlConfig(connectionUrl) {
   return dbConnection;
 }
 
+async function getTheme() {
+  await gitClone(
+    process.env.THEME_RIPOSITORY,
+    path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
+  );
+}
+
 if (!!process.env.THEME_RIPOSITORY) {
-  async function getTheme() {
-    await gitClone(
-      process.env.THEME_RIPOSITORY,
-      path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
-    );
-  }
   getTheme();
 }
 
