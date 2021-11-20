@@ -19,7 +19,8 @@
       "required": true
     },
     "THEME_RIPOSITORY": {
-      "required": true
+      "required": true,
+      "description": "Theme repo url"
     }
   }
 }
