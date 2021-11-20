@@ -97,16 +97,17 @@ function getMysqlConfig(connectionUrl) {
   return dbConnection;
 }
 
-async function getTheme() {
-  await gitClone(
-    process.env.THEME_RIPOSITORY,
-    path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
-  );
-}
+// async function getTheme() {
+//   await gitClone(
+//     process.env.THEME_RIPOSITORY,
+//     path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
+//   );
+// }
 
-if (process.env.THEME_RIPOSITORY !== undefined) {
-  getTheme();
-}
+// getTheme();
+
+// if (process.env.THEME_RIPOSITORY !== undefined) {
+// }
 
 var configContents = JSON.stringify(createConfig(), null, 2);
 fs.writeFileSync(path.join(appRoot, "config.production.json"), configContents);
