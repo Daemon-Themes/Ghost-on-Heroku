@@ -97,17 +97,27 @@ function getMysqlConfig(connectionUrl) {
   return dbConnection;
 }
 
-// async function getTheme() {
-//   await gitClone(
-//     process.env.THEME_RIPOSITORY,
-//     path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
-//   );
-// }
+async function getDefaultTheme() {
+  await gitClone(
+    "https://github.com/TryGhost/Casper.git",
+    path.join(appRoot, "/content/themes/casper")
+  );
+}
 
-// getTheme();
+async function getTheme() {
+  await gitClone(
+    process.env.THEME_RIPOSITORY,
+    path.join(appRoot, "/content/themes/" + process.env.THEME_DIR_NAME)
+  );
+}
+getDefaultTheme();
 
-// if (process.env.THEME_RIPOSITORY !== undefined) {
-// }
+/**
+ * Get theme from ripo
+ */
+if (process.env.THEME_RIPOSITORY !== undefined) {
+  getTheme();
+}
 
 var configContents = JSON.stringify(createConfig(), null, 2);
 fs.writeFileSync(path.join(appRoot, "config.production.json"), configContents);
