@@ -15,10 +15,12 @@
       "required": true
     },
     "THEME_DIR_NAME": {
-      "description": "Theme directory name where your theme will be cloned"
+      "description": "Theme directory name where your theme will be cloned",
+      "required": false
     },
     "THEME_RIPOSITORY": {
-      "description": "Theme repository url"
+      "description": "Theme repository url",
+      "required": false
     }
   }
 }
