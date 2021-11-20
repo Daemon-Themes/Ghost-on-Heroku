@@ -104,7 +104,7 @@ async function getTheme() {
   );
 }
 
-if (!!process.env.THEME_RIPOSITORY) {
+if (process.env.THEME_RIPOSITORY !== undefined) {
   getTheme();
 }
 
