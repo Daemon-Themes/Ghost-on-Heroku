@@ -40,10 +40,10 @@ function createConfig() {
     mail: {
       transport: "SMTP",
       options: {
-        service: "Mailgun",
+        host: "smtp.mailtrap.io",
         auth: {
-          user: process.env.MAILGUN_SMTP_LOGIN,
-          pass: process.env.MAILGUN_SMTP_PASSWORD,
+          user: "3bfea28f468904",
+          pass: "39d413eaf7fb55",
         },
       },
     },
